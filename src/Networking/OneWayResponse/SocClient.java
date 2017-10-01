@@ -5,6 +5,7 @@
  */
 package Networking.OneWayResponse;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
@@ -16,21 +17,18 @@ import java.net.Socket;
  * @author Goutam
  */
 public class SocClient {
-    public static void main(String [] args) throws IOException{
-        String ip = "localhost";
-        int port = 9999;
-        Socket socket = new Socket(InetAddress.getLocalHost(),port);
-         
-        String str= "Goutam Das";
-        
-        //outputstreamwriter convert our data to stream formate
-        //socket.getoutputstream means from where we want to sent data
-        OutputStreamWriter os = new OutputStreamWriter(socket.getOutputStream());
-        
-        //out is a printwriter object by which we can sent the data
-        PrintWriter out = new PrintWriter(os);
-        //writing the str data
-        os.write(str);
-        os.flush();
+
+    public static void main(String[] args) {
+        try {
+            Socket s = new Socket("localhost", 6666);
+            DataOutputStream dout = new DataOutputStream(s.getOutputStream());
+            dout.writeUTF("Hello Server");
+            dout.flush();
+            dout.close();
+            s.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
+
