@@ -21,9 +21,9 @@ public class MyStaticVsConstructor {
     }
     
     public static void main(String a[]){
-        MyStaticVsConstructor ksv1 = new MyStaticVsConstructor();
-        MyStaticVsConstructor ksv2 = new MyStaticVsConstructor();
-        MyStaticVsConstructor ksv3 = new MyStaticVsConstructor();
-        MyStaticVsConstructor ksv4 = new MyStaticVsConstructor();
+//        MyStaticVsConstructor ksv1 = new MyStaticVsConstructor();
+//        MyStaticVsConstructor ksv2 = new MyStaticVsConstructor();
+//        MyStaticVsConstructor ksv3 = new MyStaticVsConstructor();
+//        MyStaticVsConstructor ksv4 = new MyStaticVsConstructor();
     }
 }

@@ -18,9 +18,9 @@ public class BoxLayoutExample1 extends Frame {
     Button buttons[];
 
     public BoxLayoutExample1() {
-        buttons = new Button[5];
+        buttons = new Button[10];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             buttons[i] = new Button("Button " + (i + 1));
             add(buttons[i]);
         }

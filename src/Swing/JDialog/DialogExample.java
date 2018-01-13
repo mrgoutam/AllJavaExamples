@@ -26,11 +26,14 @@ public class DialogExample {
         d = new JDialog(f, "Dialog Example", true);
         d.setLayout(new FlowLayout());
         JButton b = new JButton("OK");
+        
         b.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 DialogExample.d.setVisible(false);
             }
         });
+        
         d.add(new JLabel("Click button to continue."));
         d.add(b);
         d.setSize(300, 300);

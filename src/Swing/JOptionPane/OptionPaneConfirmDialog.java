@@ -27,6 +27,7 @@ public class OptionPaneConfirmDialog extends WindowAdapter {
         f.setVisible(true);
     }
 
+    @Override
     public void windowClosing(WindowEvent e) {
         int a = JOptionPane.showConfirmDialog(f, "Are you sure?");
         if (a == JOptionPane.YES_OPTION) {

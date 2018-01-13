@@ -30,6 +30,10 @@ public class JavaCheckBoxMenuItem {
         JMenu fileMenu = new JMenu("File");
         fileMenu.setMnemonic(KeyEvent.VK_F);
         menuBar.add(fileMenu);
+        
+        JMenu fileMenu1 = new JMenu("File1");
+        fileMenu1.setMnemonic(KeyEvent.VK_F);
+        menuBar.add(fileMenu1);
         // File->New, N - Mnemonic  
         JMenuItem menuItem1 = new JMenuItem("Open", KeyEvent.VK_N);
         fileMenu.add(menuItem1);
@@ -39,6 +43,7 @@ public class JavaCheckBoxMenuItem {
         fileMenu.add(caseMenuItem);
 
         ActionListener aListener = new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent event) {
                 AbstractButton aButton = (AbstractButton) event.getSource();
                 boolean selected = aButton.getModel().isSelected();

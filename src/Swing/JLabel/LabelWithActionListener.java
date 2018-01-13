@@ -40,6 +40,8 @@ public class LabelWithActionListener extends Frame implements ActionListener{
         setSize(400,400);
         setLayout(null);
         setVisible(true);
+        
+        
     }
         
 

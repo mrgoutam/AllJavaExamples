@@ -18,6 +18,7 @@ public class InterfaceMultipleUse {
         r.draw();
     }
 }
+
 class Circle implements Drawable{
 
     @Override

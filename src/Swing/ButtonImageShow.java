@@ -15,9 +15,9 @@ import javax.swing.JFrame;
  */
 public class ButtonImageShow {
 
-    public ButtonImageShow() {
+    public ButtonImageShow(int a, int c) {
         JFrame j = new JFrame("Image show example");
-        j.setSize(500,500);
+        j.setSize(a,c);
         j.setLayout(null);
         j.setVisible(true);
         j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,6 +27,6 @@ public class ButtonImageShow {
         j.add(b);
     }
     public static void main(String s[]){
-        ButtonImageShow buttonImageShow = new ButtonImageShow();
+        ButtonImageShow buttonImageShow = new ButtonImageShow(500,500);
     }
 }

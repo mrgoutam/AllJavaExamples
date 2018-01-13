@@ -11,6 +11,7 @@ package Thread;
  */
 public class TestCallRun2 extends Thread {
 
+    @Override
     public void run() {
         for (int i = 1; i < 5; i++) {
             try {

@@ -5,7 +5,9 @@
  */
 package Swing.JTable;
 
+import java.awt.Component;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
@@ -39,6 +41,8 @@ public class TableExample {
         String column[] = {"ID", "NAME", "SALARY"};
         JTable jt = new JTable(data, column);
         jt.setBounds(30, 40, 200, 300);
+        
+        
         JScrollPane sp = new JScrollPane(jt);
         f.add(sp);
         f.setSize(300, 400);

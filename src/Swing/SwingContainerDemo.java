@@ -57,7 +57,7 @@ public class SwingContainerDemo {
    private void showJPanelDemo(){
       headerLabel.setText("Container in action: JPanel");      
       JPanel panel = new JPanel();
-      panel.setBackground(Color.magenta);
+      panel.setBackground(Color.BLUE);
       panel.setLayout(new FlowLayout());        
       panel.add(msglabel);
       controlPanel.add(panel);        

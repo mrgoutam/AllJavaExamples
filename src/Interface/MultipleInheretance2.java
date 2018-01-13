@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Thread;
+package Interface;
 
 /**
  *
  * @author Goutam
  */
-public class RunnableInterface implements Runnable{
+public class MultipleInheretance2 implements InterfaceA, InterfaceB{
 
     @Override
-    public void run() {
-        System.out.println("thread is running...");
+    public void method() {
+        System.out.println("See the differences in case of mulitiple inheretance");
     }
+    
     public static void main(String args[]){
-        RunnableInterface ri = new RunnableInterface();
-        Thread t = new Thread(ri);
-        t.start();
+        MultipleInheretance2 i = new MultipleInheretance2();
+        i.method();
+        
     }
 }

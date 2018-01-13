@@ -42,7 +42,9 @@ public class PasswordFieldWithActionListener {
         f.setSize(300, 300);
         f.setLayout(null);
         f.setVisible(true);
+        
         b.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 String data = "Username " + text.getText();
                 data += ", Password: "
@@ -50,5 +52,6 @@ public class PasswordFieldWithActionListener {
                 label.setText(data);
             }
         });
+        
     }
 }

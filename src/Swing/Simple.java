@@ -18,12 +18,11 @@ public class Simple {
         j.setSize(400, 500);
         j.setLayout(null);
         j.setVisible(true);
-        
         JButton b = new JButton("Click Me");
         b.setBounds(200, 200, 100, 100);
         j.add(b);
     }
     public static void main(String a[]){
-        new Simple();
+        Simple simple = new Simple();
     }
 }
