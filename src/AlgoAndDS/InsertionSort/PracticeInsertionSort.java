@@ -11,36 +11,33 @@ package AlgoAndDS.InsertionSort;
  */
 public class PracticeInsertionSort {
 
-    private int arr[] = {10,9,8,7,6,5,4,3,2,1};
+    private int[] input = {8, 5, 9, 2, 4, 3, 6, 10, 0, 20};
+    private int l, r, temp;
 
-    public static void main(String args[]) {
-        
+    public static void main(String[] args) {
         PracticeInsertionSort pis = new PracticeInsertionSort();
-        pis.ReadArray();
-        pis.insertionSortingMethod();
-        pis.ReadArray();
-        System.out.println("");
+       
+        pis.sortMethod();
+        pis.printArr();
     }
 
-    public void insertionSortingMethod() {
-       System.out.println("");
-        for (int i = 1; i < arr.length; i++) {
-            int element = arr[i];
-            int j = i - 1;
-            while (j > 0 && element < arr[j]) {
-                int prev = arr[j];
-                arr[j] = element;
-                arr[i] = prev;
-                j = j-1;
+    private void sortMethod() {
+        for (int i = 1; i < input.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (input[j] < input[j - 1]) {
+                    temp = input[j];
+                    input[j] = input[j - 1];
+                    input[j - 1] = temp;
+                }
             }
         }
-        
-        
+
     }
-    
-    private  void ReadArray(){
-        for(int i=0; i< arr.length; i++){
-            System.out.print( arr[i]+"\t");
+
+    private void printArr() {
+        for (int i = 0; i < input.length; i++) {
+            System.out.println(input[i]);
         }
     }
+
 }
